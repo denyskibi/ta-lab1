@@ -21,7 +21,7 @@ def main():
     #   DEBUG - в консолі будуть відображатись повідомлення з кожної ітерації множення методом Карацуби
     #   INFO - в консолі будуть відображатись тільки вхідні дані і результат або попередження/помилки
     logger.remove()  # reset current logger
-    logger.add(sys.stderr, level="DEBUG")  # create new logger & set log level
+    logger.add(sys.stderr, level="INFO")  # create new logger & set log level
 
     try:
         # Step #1: Встановлюємо довжину чисел, які будуть генеруватись

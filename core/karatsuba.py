@@ -11,7 +11,7 @@ class Karatsuba:
 
         # Step #1: Перевіряємо базовий випадок рекурсії (якщо x або y < 10 - перемножуємо їх і повертаємо результат)
         if x < 10 or y < 10:
-            logger.warning(f"Base recursive case occurred for input numbers x={x}, y={y}")
+            logger.debug(f"Base recursive case occurred for input numbers x={x}, y={y}")
             return x * y
 
         # Step #2: Знаходимо середину довжини числа (для подальшого розділення числа на частини)
