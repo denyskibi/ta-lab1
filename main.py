@@ -45,7 +45,7 @@ def main():
         result = karatsuba.multiply_two_numbers(x=x_randomized, y=y_randomized)
         calls_count = karatsuba.get_method_calls_count()
         logger.success(f'The result of multiplication by the Karatsuba method: {result}')
-        logger.info(f'Method was used {calls_count} times.')
+        logger.info(f'Karatsuba method was used {calls_count} times.')
     except KeyboardInterrupt:
         logger.error('Failed: script interrupted by user (CTRL + C)')
         stop()
