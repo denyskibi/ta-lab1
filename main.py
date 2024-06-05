@@ -33,8 +33,19 @@ def main():
 
         logger.info(f'Generated input numbers: x={x_randomized}, y={y_randomized}')
 
-        # Step #3: Виконуємо множення двох чисел за допомогою алгоритму Карацуби.
+        # Step #3: Виконуємо множення двох чисел за допомогою алгоритму Карацуби:
+
+        # Завдання #1
+        # result = karatsuba.multiply_two_numbers(x=x_randomized, y=y_randomized)
+        # logger.success(f'The result of multiplication by the Karatsuba method: {result}')
+
+        # OR (запускати або блок з Завдання 1 або блок з Завдання 2)
+
+        # Завдання #2
         result = karatsuba.multiply_two_numbers(x=x_randomized, y=y_randomized)
+        calls_count = karatsuba.get_method_calls_count()
+        logger.success(f'The result of multiplication by the Karatsuba method: {result}')
+        logger.info(f'Method was used {calls_count} times.')
     except KeyboardInterrupt:
         logger.error('Failed: script interrupted by user (CTRL + C)')
         stop()
@@ -42,7 +53,7 @@ def main():
         logger.error(f'Failed due to error: {e}')
         stop()
     else:
-        logger.success(f'The result of multiplication by the Karatsuba method: {result}')
+        logger.success('Script finished without any critical errors.')
 
 
 if __name__ == '__main__':

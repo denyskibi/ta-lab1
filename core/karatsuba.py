@@ -6,7 +6,12 @@ from loguru import logger
 
 
 class Karatsuba:
+    def __init__(self):
+        self._method_calls_counter: int = 0
+
     def multiply_two_numbers(self, x: int, y: int) -> float:
+        self._method_calls_counter += 1  # increase the calls counter by 1
+
         logger.debug(f"Starting multiplying numbers {x} and {y} by Karatsuba method.")
 
         # Step #1: Перевіряємо базовий випадок рекурсії (якщо x або y < 10 - перемножуємо їх і повертаємо результат)
@@ -31,6 +36,9 @@ class Karatsuba:
         # Step #5: # Обчислюємо результат за формулою Карацуби
         result = self._calculate_result(z0, z1, z2, middle_of_num_len)
         return result
+
+    def get_method_calls_count(self) -> int:
+        return self._method_calls_counter
 
     @staticmethod
     def _get_the_middle_of_number_len(x: int, y: int) -> int:
