@@ -40,8 +40,9 @@ def main():
         stop()
     except Exception as e:
         logger.error(f'Failed due to error: {e}')
+        stop()
     else:
-        logger.success(f'The result of multiplication by the Kartsuba method: {result}')
+        logger.success(f'The result of multiplication by the Karatsuba method: {result}')
 
 
 if __name__ == '__main__':
